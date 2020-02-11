@@ -5,14 +5,22 @@ summary: Step Wizard - the Availity Way
 
 ## Installation
 
+### NPM
+
 ```bash
-npm install @availity/step-wizard --save
+$ npm install @availity/step-wizard --save
+```
+
+### Yarn
+
+```bash
+$ yarn add @availity/step-wizard
 ```
 
 ## Example
 
-```jsx live=true
-import Wizard, { WizardStep, WizardStepBadge, WizardStepTitle } from '@availity/step-wizard';
+```jsx live=true viewCode=true
+import Wizard, { WizardStep, WizardStepBadge, WizardStepTitle, } from '@availity/step-wizard';
 
 <Wizard bar>
   <WizardStep complete href="#step-1">
@@ -32,7 +40,9 @@ import Wizard, { WizardStep, WizardStepBadge, WizardStepTitle } from '@availity/
 
   <WizardStep disabled href="#step-4">
     <WizardStepBadge>4</WizardStepBadge>
-    <WizardStepTitle>Fourth with some really really really long text</WizardStepTitle>
+    <WizardStepTitle>
+      Fourth with some really really really long text
+    </WizardStepTitle>
   </WizardStep>
 
   <WizardStep>
@@ -44,5 +54,5 @@ import Wizard, { WizardStep, WizardStepBadge, WizardStepTitle } from '@availity/
     <WizardStepBadge>6</WizardStepBadge>
     <WizardStepTitle>Sixth without link but clickable</WizardStepTitle>
   </WizardStep>
-</Wizard>
+</Wizard>;
 ```

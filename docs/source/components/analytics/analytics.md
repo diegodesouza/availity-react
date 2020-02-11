@@ -1,5 +1,5 @@
 ---
-title: <Analytics /> ( Default Export )
+title: <Analytics /> (Default Export)
 summary: Component allowing page and click events to be tracked.
 ---
 
@@ -11,18 +11,20 @@ import { Button } from 'reactstrap';
 import Analytics from '@availity/Analytics';
 
 const plugin = {
-    trackEvent: e => {
-        alert(JSON.stringify(e))
-    }
-}
+  trackEvent: e => {
+    alert(JSON.stringify(e));
+  },
+};
 
-<Analytics
-    plugins={[plugin]}
-    recurisve
-    attributePrefix="data-av-analytics"
->
-  <Button type="button" data-av-analytics-action="click" id="button">Click Me</Button>
-</Analytics>
+const MyComponent = () => {
+  return (
+    <Analytics plugins={[plugin]} recurisve attributePrefix="data-av-analytics">
+      <Button type="button" data-av-analytics-action="click" id="button">
+        Click Me
+      </Button>
+    </Analytics>
+  );
+};
 ```
 
 ## Props

@@ -45,19 +45,25 @@ import '@availity/yup';
 Extends [Select Props](/form/select/components/select/#props).
 
 ### `name: string`
+
 The name of the field. Will be the key of the selected date that comes through in the values of the `onSubmit` callback.
 
 ### `label?: ReactNode`
+
 The label to render above the `Select` input.
 
 ### `labelHidden?: boolean`
+
 Whether the `label` should be hidden.
 
 ### `labelClass?: string`
+
 Class names to pass to the `Label`.
 
 ### `feedbackClass?: string`
+
 Class names to pass to the `Feedback`.
 
 ### `groupClass?: string`
+
 Class names to pass to the `FormGroup`.

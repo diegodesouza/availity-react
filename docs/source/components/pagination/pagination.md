@@ -1,5 +1,5 @@
 ---
-title: <Pagination /> ( Default Export )
+title: <Pagination /> (Default Export)
 ---
 
 This is the provider component needed for `@availity/pagination` components to work. All `@availity/pagination` components must be children of a Pagination provider.
@@ -9,10 +9,14 @@ This is the provider component needed for `@availity/pagination` components to w
 ```jsx
 import React from 'react';
 import Pagination from '@availity/pagination';
-// ...
-<Pagination itemsPerPage={25} items={this.state.items}>
-  <Pagination.Content component={Component} />
-</Pagination>;
+
+const MyComponent = () => {
+  return (
+    <Pagination itemsPerPage={25} items={this.state.items}>
+      <Pagination.Content component={Component} />
+    </Pagination>
+  );
+};
 ```
 
 ## Props

@@ -1,10 +1,10 @@
 ---
-title: Disclaimer
+title: <Disclaimer />
 ---
 
 ## Example
 
-```jsx live=true
+```jsx live=true viewCode=true
 import { Disclaimer } from '@availity/typography';
 
 <Disclaimer styled>
@@ -18,8 +18,8 @@ import { Disclaimer } from '@availity/typography';
 </Disclaimer>;
 ```
 
-### Props
+## Props
 
-| Prop Name    | Types   | Required | Default | Description                                                          |
-| ------------ | ------- | -------- | ------- | -------------------------------------------------------------------- |
-| **`styled`** | Boolean | false    | `true`  | When true, a vertical bar is displayed to the left of the disclaimer |
+### `styled?: boolean`
+
+When true, a vertical bar is displayed to the left of the disclaimer. **Default:** `true`

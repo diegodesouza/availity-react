@@ -5,8 +5,16 @@ summary: Simple link component that renders an `<a>` tag with the `href` formatt
 
 ## Installation
 
+### NPM
+
 ```bash
-npm install @availity/link --save
+$ npm install @availity/link --save
+```
+
+### Yarn
+
+```bash
+$ yarn add @availity/link
 ```
 
 ## Example
@@ -36,7 +44,9 @@ Where to open the linked document.
 The tag to use in the link that gets rendered. **Default:** `<a>`.
 
 ### `onClick: (event: Event, url: string) => void`
+
 Function to run onClick of the link. The first argument passed to `onClick` is the event. The second argument is the processed `url`.
 
 ### `loadApp?: boolean`
+
 When `false`, the `url` prop to `AvLink` is _not_ formatted to leverage loadApp. **Default:** `true`.

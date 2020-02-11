@@ -11,9 +11,13 @@ import React from 'react';
 import { AvResourcePagination, PaginationControls } from '@availity/pagination';
 import { avOrganizationsApi } from '@availity/api-axios';
 
-<AvResourcePagination resource={avOrganizationsApi} itemsPerPage={25}>
-  <PaginationControls />
-</AvResourcePagination>;
+const MyComponent = () => {
+  return (
+    <AvResourcePagination resource={avOrganizationsApi} itemsPerPage={25}>
+      <PaginationControls />
+    </AvResourcePagination>
+  );
+};
 ```
 
 ## Props

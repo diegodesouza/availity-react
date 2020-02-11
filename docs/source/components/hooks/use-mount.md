@@ -8,8 +8,8 @@ summary: Hook that runs a function on mount and dismount if a function is return
 ```jsx
 import React, { useState } from 'react';
 import { useMount } from '@availity/hooks';
-// ...
-const Component = () => {
+
+const MyComponent = () => {
   useMount(() => {
     doSomethingOnMount();
 
@@ -20,7 +20,6 @@ const Component = () => {
 
   return <div>Test Component</div>;
 };
-// ...
 ```
 
 ## Props

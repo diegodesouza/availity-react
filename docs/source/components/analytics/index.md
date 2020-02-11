@@ -8,26 +8,11 @@ summary: Track page events and user clicks.
 ## Installation
 
 ```bash
-npm install @availity/analytics --save
+$ npm install @availity/analytics --save
 ```
 
-## Example
+### Yarn
 
-```jsx
-import React from 'react';
-import { Button } from 'reactstrap';
-import Analytics from '@availity/Analytics';
-
-const plugin = {
-    trackEvent: e => {
-        alert(JSON.stringify(e))
-    }
-}
-
-<Analytics
-    plugins={[plugin]}
-    attributePrefix="data-av-analytics"
->
-  <Button type="button" data-av-analytics-action="click" id="button">Click Me</Button>
-</Analytics>
+```bash
+$ yarn add @availity/analytics
 ```

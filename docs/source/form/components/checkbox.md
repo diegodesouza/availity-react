@@ -6,6 +6,9 @@ summary: Inputs of type checkbox. Checkboxes should be wrapped in a CheckboxGrou
 ## Example
 
 ```jsx live=true viewCode=true
+import { Form, Checkbox, CheckboxGroup } from '@availity/form';
+import { Button } from 'reactstrap';
+
 <Form
   initialValues={{
     hello: [],
@@ -20,20 +23,26 @@ summary: Inputs of type checkbox. Checkboxes should be wrapped in a CheckboxGrou
     <Checkbox label="Check Two" value="dos" />
     <Checkbox label="Check Three" value="tres" />
   </CheckboxGroup>
-  <Button type="submit" color="primary">Submit</Button>
-</Form>
+  <Button type="submit" color="primary">
+    Submit
+  </Button>
+</Form>;
 ```
 
 ## Props
 
 ### `id?: string`
+
 Should match `<CheckboxGroup />` name for validation.
 
 ### `label?: ReactNode`
+
 Label for the checkbox.
 
 ### `value?: string`
+
 Value of the checkbox.
 
 ### `disabled?: boolean`
+
 Disables the checkbox.

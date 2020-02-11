@@ -4,7 +4,7 @@ title: <Agreement />
 
 ## Example
 
-```jsx live=true
+```jsx live=true viewCode=true
 import { Agreement } from '@availity/typography';
 
 <Agreement>

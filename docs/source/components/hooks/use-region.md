@@ -8,11 +8,10 @@ summary: Hook that returns the user's current region.
 ```jsx
 import React, { useState } from 'react';
 import { useCurrentRegion } from '@availity/hooks';
-// ...
-const Component = () => {
+
+const MyComponent = () => {
   const [region, loading] = useCurrentRegion();
 
   return <div>{loading ? 'Loading...' : region.value}</div>;
 };
-// ...
 ```

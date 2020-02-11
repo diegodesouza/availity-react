@@ -6,12 +6,18 @@ summary: Favorite Heart for favoriting items such as resources/applications etc.
 ## Installation
 
 ```bash
-npx install-peerdeps @availity/favorites --save
+$ npx install-peerdeps @availity/favorites --save
+```
+
+### Yarn
+
+```bash
+$ yarn add @availity/favorites
 ```
 
 ## Example
 
-```jsx live=true
+```jsx live=true viewCode=true
 import Favorites from '@availity/favorites';
 import '@availity/favorites/style.scss';
 

@@ -8,13 +8,12 @@ summary: Returns a boolean that can easily be toggled. Useful for loaders, and t
 ```jsx
 import React from 'react';
 import { useToggle } from '@availity/hooks';
-// ...
-const Component = () => {
+
+const MyComponent = () => {
   const [isToggled, toggle] = useToggle();
 
   return <div onClick={toggle}>{isToggled ? 'Hello' : 'World'}</div>;
 };
-// ...
 ```
 
 You can also pass the state you want to set the toggle to. If it hasn't changed, it will not perform a state update.

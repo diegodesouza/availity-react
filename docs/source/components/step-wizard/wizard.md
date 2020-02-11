@@ -1,5 +1,5 @@
 ---
-title: <Wizard /> ( Default Export )
+title: <Wizard /> (Default Export)
 summary: Container for the step wizard.
 ---
 

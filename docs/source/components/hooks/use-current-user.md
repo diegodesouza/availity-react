@@ -8,11 +8,10 @@ summary: Hook that returns the current user.
 ```jsx
 import React, { useState } from 'react';
 import { useCurrentUser } from '@availity/hooks';
-// ...
-const Component = () => {
+
+const MyComponent = () => {
   const [user = {}, loading] = useCurrentUser();
 
   return <div>{loading ? 'Loading...' : user.id}</div>;
 };
-// ...
 ```

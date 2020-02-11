@@ -12,14 +12,22 @@ import { Form } from '@availity/form';
 import { FilePicker } from '@availity/form-upload';
 import { CustomInput } from 'reactstrap';
 
-handleFileSelection = event => {
-  const { files } = event.target;
-  // do something with the files.
-};
+const MyComponent = () => {
+  const handleFileSelection = event => {
+    const { files } = event.target;
+    // do something with the files.
+  };
 
-<Form initialValues={{ myFile: undefined }}>
-  <FilePicker name="myFile" tag={CustomInput} onChange={this.handleFileSelection} />
-</Form>
+  return (
+    <Form initialValues={{ myFile: undefined }}>
+      <FilePicker
+        name="myFile"
+        tag={CustomInput}
+        onChange={handleFileSelection}
+      />
+    </Form>
+  );
+};
 ```
 
 ## Props

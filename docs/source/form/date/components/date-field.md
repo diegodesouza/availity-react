@@ -41,16 +41,21 @@ import '@availity/yup/moment';
 Extends [Date Props](/form/date/components/date/#props).
 
 ### `name: string`
+
 The name of the field. Will be the key of the selected date that comes through in the values of the `onSubmit` callback.
 
 ### `label?: string`
+
 The text that renders inside the `Label` above the input.
 
 ### `labelClass?: string`
+
 The name of the class for the label. Will be passed to the `className` prop of the label in the field.
 
 ### `labelHidden?: boolean`
+
 Used to control if the label is displayed. When set to `true`, the label in the field won't be visible.
 
 ### `labelAttrs?: React.HTMLAttributes<HTMLLabelElement>`
+
 Pass additonal attributes to the label

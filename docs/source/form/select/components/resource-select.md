@@ -156,50 +156,53 @@ const schema = yup.object().shape({
   patient: yup.string().required('This field is required.'),
 });
 
-// ...
-<Form
-  initialValues={{
-    provider: null,
-    organization: null,
-    region: null,
-    permissions: null,
-    payerSpace: null,
-    user: null,
-    code: null,
-    patient: null,
-  }}
-  onSubmit={values => apiResource.submit(values)}
-  validationSchema={schema}
->
-  <AvProviderSelect
-    name="provider"
-    customerId="1234"
-    requiredParams={['customerId']}
-    watchParams={['customerId']}
-    label="Select a provider"
-    customerId={customerId}
-    required
-  />
-  <AvOrganizationSelect
-    name="organization"
-    label="Select a Organization"
-    required
-  />
-  <AvRegionSelect name="region" label="Select a Region" required />
-  <AvPermissionSelect
-    name="permissions"
-    label="Select a provider"
-    customerId={customerId}
-    isMulti
-    required
-  />
-  <AvNavigationSelect
-    name="payerSpace"
-    label="Select a Payer Space"
-    customerId={customerId}
-    required
-  />
-  <AvUserSelect name="user" label="Select a User" customerId={customerId} />
-  <AvCodeSelect name="code" label="Select a Code" />
-</Form>;
+const MyComponent = () => {
+  return (
+    <Form
+      initialValues={{
+        provider: null,
+        organization: null,
+        region: null,
+        permissions: null,
+        payerSpace: null,
+        user: null,
+        code: null,
+        patient: null,
+      }}
+      onSubmit={values => apiResource.submit(values)}
+      validationSchema={schema}
+    >
+      <AvProviderSelect
+        name="provider"
+        customerId="1234"
+        requiredParams={['customerId']}
+        watchParams={['customerId']}
+        label="Select a provider"
+        customerId={customerId}
+        required
+      />
+      <AvOrganizationSelect
+        name="organization"
+        label="Select a Organization"
+        required
+      />
+      <AvRegionSelect name="region" label="Select a Region" required />
+      <AvPermissionSelect
+        name="permissions"
+        label="Select a provider"
+        customerId={customerId}
+        isMulti
+        required
+      />
+      <AvNavigationSelect
+        name="payerSpace"
+        label="Select a Payer Space"
+        customerId={customerId}
+        required
+      />
+      <AvUserSelect name="user" label="Select a User" customerId={customerId} />
+      <AvCodeSelect name="code" label="Select a Code" />
+    </Form>
+  );
+};
 ```

@@ -5,8 +5,16 @@ summary: List Group Item with some Availity flair
 
 ## Installation
 
+### NPM
+
 ```bash
-npm install @availity/list-group-item --save
+$ npm install @availity/list-group-item --save
+```
+
+### Yarn
+
+```bash
+$ yarn add @availity/list-group-item
 ```
 
 ## Example
@@ -20,5 +28,5 @@ import ListGroupItem, { ListGroupItemStatus } from '@availity/list-group-item';
     <ListGroupItem>Item</ListGroupItem>
     <ListGroupItemStatus>Item2</ListGroupItemStatus>
   </ListGroup>
-</div>
+</div>;
 ```

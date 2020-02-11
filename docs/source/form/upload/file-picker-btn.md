@@ -10,14 +10,18 @@ import React from 'react';
 import { Form } from '@availity/form';
 import { FilePickerBtn } from '@availity/form-upload';
 
-handleFileSelection = event => {
-  const { files } = event.target;
-  // do something with the files.
-};
+const MyComponent = () => {
+  const handleFileSelection = event => {
+    const { files } = event.target;
+    // do something with the files.
+  };
 
-<Form initialValues={{ myFile: undefined }}>
-  <FilePickerBtn name="myFile" onChange={this.handleFileSelection} />;
-</Form>
+  return (
+    <Form initialValues={{ myFile: undefined }}>
+      <FilePickerBtn name="myFile" onChange={handleFileSelection} />;
+    </Form>
+  );
+};
 ```
 
 ## Props

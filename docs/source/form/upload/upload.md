@@ -1,5 +1,5 @@
 ---
-title: <Upload /> ( Default Export )
+title: <Upload /> (Default Export)
 ---
 
 The default export is an all-in-one solution which handles uploads, encrypted file password requests and file state management for you.
@@ -11,9 +11,13 @@ import React from 'react';
 import Upload from '@availity/form-upload';
 import { Form } from '@availity/form';
 
-<Form initialValues={{ myFile: undefined }}>
-  <Upload name="myFile" clientId="a" bucketId="b" customerId="c" />;
-</Form>
+const MyComponent = () => {
+  return (
+    <Form initialValues={{ myFile: undefined }}>
+      <Upload name="myFile" clientId="a" bucketId="b" customerId="c" />;
+    </Form>
+  );
+};
 ```
 
 ## Props
@@ -77,37 +81,33 @@ import React from 'react';
 import { Form } from '@availity/form';
 import Upload from '@availity/form-upload';
 
-<Form initialValues={{ myFile: undefined }}>
-  <Upload
-    name="myFile"
-    btnText="Upload a claim"
-    clientId="a"
-    bucketId="b"
-    customerId="c"
-    multiple={false}
-    max={1}
-  />
-</Form>
+const MyComponent = () => {
+  return (
+    <Form initialValues={{ myFile: undefined }}>
+      <Upload
+        name="myFile"
+        btnText="Upload a claim"
+        clientId="a"
+        bucketId="b"
+        customerId="c"
+        multiple={false}
+        max={1}
+      />
+    </Form>
+  );
+};
 ```
 
 ### Callback Function Usage
 
 ```jsx
-<Form initialValues={{ myFile: undefined }}>
-  <Upload
-    name="myFile"
-    btnText="Upload a claim"
-    clientId="a"
-    bucketId="b"
-    customerId="c"
-    onFileUpload={onUpload} // <-- add file callback function
-    onFileRemove={onRemove} // <-- remove file callback function
-    max={1}
-  />
-</Form>
+import React from 'react';
+import { Form } from '@availity/form';
+import Upload from '@availity/form-upload';
 
-// onUpload callback definition
-onUpload(upload) {
+const MyComponent = () => {
+  // onUpload callback definition
+  const onUpload = upload => {
     if (upload) {
       upload.onSuccess.push(async () => {
         // success action
@@ -116,11 +116,26 @@ onUpload(upload) {
         // error action
       });
     }
-  }
-// ...
+  };
 
-// onRemove callback definition
-onRemove(file) {
-  // remove action
-}
+  // onRemove callback definition
+  const onRemove = file => {
+    // remove action
+  };
+
+  return (
+    <Form initialValues={{ myFile: undefined }}>
+      <Upload
+        name="myFile"
+        btnText="Upload a claim"
+        clientId="a"
+        bucketId="b"
+        customerId="c"
+        onFileUpload={onUpload}
+        onFileRemove={onRemove}
+        max={1}
+      />
+    </Form>
+  );
+};
 ```

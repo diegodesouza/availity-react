@@ -6,6 +6,9 @@ summary: Inputs of type radio. Radios should be wrapped in a RadioGroup.
 ## Example
 
 ```jsx live=true viewCode=true
+import { Radio, RadioGroup } from '@availity/form';
+import { Button } from 'reactstrap';
+
 <Form
   initialValues={{
     hello: '',
@@ -21,19 +24,23 @@ summary: Inputs of type radio. Radios should be wrapped in a RadioGroup.
     <Radio label="Radio Three" value="tres" />
   </RadioGroup>
   <Button type="submit">Submit</Button>
-</Form>
+</Form>;
 ```
 
 ## Props
 
 ### `id?: string`
+
 Should match `<RadioGroup />` name for validation.
 
 ### `label?: ReactNode`
+
 Label for the checkbox.
 
 ### `value?: string`
+
 Value of the checkbox.
 
 ### `disabled?: boolean`
+
 Disables the checkbox.
