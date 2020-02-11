@@ -36,7 +36,7 @@ import '@availity/yup/moment';
       Submit
     </Button>
   </Form>
-</div>;
+</div>
 ```
 
 ## Props
